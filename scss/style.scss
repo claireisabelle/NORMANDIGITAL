@@ -1,0 +1,239 @@
+/*
+Theme name: NormanDigital
+Author: Claire Bourdalé - Arroweb
+Author URI: https://www.arroweb.net
+Description: Thème NormanDigital
+Version: 1.0
+*/
+
+
+
+$rouge: #d9002a;
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: rgb(45,45,45);
+	font-size: 16px;
+}
+
+.rouge{
+	color: $rouge;
+}
+
+.wrapper{
+	width: 100%;
+	height: 100vh;
+	background-image: url('img/background.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+header ul{
+	list-style-type: none;
+	color: rgb(230,230,230);
+	text-align: right;
+	padding: 20px 20px 0 0;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2rem;
+}
+
+header li{
+	display: inline;
+}
+
+header li::after{
+	content: "|";
+	color: $rouge;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+header li:last-child::after{
+	content: "";
+}
+
+.contenu{
+	width: 100%;
+	height: calc(100vh - 100px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+}
+
+.wrapper-logo{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.logo{
+	text-align: center;
+}
+
+.logo img{
+	max-width: 100%;
+  	height: auto;
+}
+
+.logo h1{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.logo h2{
+	font-weight: normal;
+	letter-spacing: 3px;
+}
+
+.wrapper-info{
+	flex-grow: 1;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+.info{
+	background-image: url('img/icone.png');
+	background-repeat: no-repeat;
+	background-position: center left;
+	padding-left: 30px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+
+}
+
+.info h3{
+	font-weight: normal;
+	font-size: 1.8rem;
+	padding-bottom: 15px;
+}
+
+
+.info ul{
+	list-style-type: none;
+	font-size: 1.2rem;
+	color: rgb(230,230,230);
+}
+
+.info li{
+	display: inline;
+}
+
+.info li::after{
+	content: "•";
+	color: $rouge;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.info li:last-child::after{
+	content: "";
+}
+
+.image{
+	position: relative;
+	z-index: 0;
+}
+
+.image img{
+	max-width: 100%;
+	height: auto;
+	max-height: 250px;
+}
+
+.cadre{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 80%;
+	border: solid 1px;
+	border-color: rgba(255,255,255,0.2);
+	top: 10%;
+	left: -5%;
+}
+
+@media (max-width: 885px){
+	
+	header{
+		margin-bottom: 50px;
+	}
+	
+	.wrapper-logo{
+		justify-content: center;
+		margin-bottom: 100px;
+	}
+
+	.wrapper-info{
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media (max-width: 620px){
+	
+
+	header li{
+		display: block;
+	}
+
+	header li::after{
+		content: "";
+		color: $rouge;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+}
+
+@media (max-width: 475px){
+	.wrapper{
+		height: auto;
+	}
+
+	.wrapper-logo{
+		margin-bottom: 40px;
+	}
+
+	.logo h2{
+		font-size: 1rem;
+	}
+
+	.info h3{
+		font-size: 1.2rem;
+	}
+
+	.info ul{
+		font-size: 0.8rem;
+	}
+
+	.wrapper-info{
+		align-items: flex-start;
+		margin-left: 20px;
+	}
+
+	.image{
+		margin-left: 50px;
+	}
+}
+
+@media (max-height: 550px){
+	.wrapper{
+		height: auto;
+	}
+
+	.wrapper-info{
+		margin-top: 200px;
+	}
+	
+}
