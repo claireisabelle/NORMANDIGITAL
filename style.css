@@ -46,6 +46,11 @@ header li::after {
 header li:last-child::after {
   content: ""; }
 
+header li a{
+  color: #e6e6e6;
+  text-decoration: none;
+}
+
 .contenu {
   width: 100%;
   height: calc(100vh - 100px);
